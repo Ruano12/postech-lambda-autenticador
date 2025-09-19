@@ -1,0 +1,11 @@
+name: "Terraform Destroy"
+description: "Solicitar destruição da infraestrutura"
+title: "[Terraform Destroy] "
+labels: ["terraform", "destroy"]
+
+body:
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Por que você quer destruir a infra?"
+      description: "Explique o motivo da destruição (opcional)."
