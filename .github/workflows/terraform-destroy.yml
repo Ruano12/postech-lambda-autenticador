@@ -36,8 +36,7 @@ jobs:
         run: terraform destroy -auto-approve
 
       - name: Close Issue
-        uses: peter-evans/close-issue@v3     
-        working-directory: infra
+        uses: peter-evans/close-issue@v3
         with:
           issue-number: ${{ github.event.issue.number }}
           comment: "✅ Infra destruída com sucesso pelo Terraform."
