@@ -18,22 +18,27 @@ jobs:
 
 
     steps:
-      - name: Checkout
+      - name: Checkout     
+        working-directory: infra
         uses: actions/checkout@v4
 
-      - name: Setup Terraform
+      - name: Setup Terraform     
+        working-directory: infra
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.9.5
 
-      - name: Terraform Init
+      - name: Terraform Init     
+        working-directory: infra
         run: terraform init
 
-      - name: Terraform Destroy
+      - name: Terraform Destroy     
+        working-directory: infra
         run: terraform destroy -auto-approve
 
       - name: Close Issue
-        uses: peter-evans/close-issue@v3
+        uses: peter-evans/close-issue@v3     
+        working-directory: infra
         with:
           issue-number: ${{ github.event.issue.number }}
           comment: "✅ Infra destruída com sucesso pelo Terraform."
