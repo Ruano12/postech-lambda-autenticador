@@ -18,8 +18,7 @@ jobs:
 
 
     steps:
-      - name: Checkout     
-        working-directory: infra
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Terraform     
