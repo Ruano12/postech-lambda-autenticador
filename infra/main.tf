@@ -69,9 +69,10 @@ resource "aws_security_group" "lambda_autenticador" {
 # Empacota o código da lambda em zip
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../src"
+  source_dir  = "${path.module}/../app/src"
   output_path = "${path.module}/lambda.zip"
 }
+
 
 # Lambda
 resource "aws_lambda_function" "lambda_autenticador" {
