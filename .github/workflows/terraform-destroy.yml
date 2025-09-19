@@ -6,7 +6,7 @@ on:
 
 jobs:
   destroy:
-    if: contains(toLower(github.event.issue.title), '[terraform destroy]')
+    if: contains(github.event.issue.title, '[Terraform Destroy]')
     runs-on: ubuntu-latest
     environment: actions
     
