@@ -8,7 +8,7 @@ on:
 
 jobs:
   terraform:
-    name: lambda-autenticator
+    name: Terraform-lambda-authenticator
     runs-on: ubuntu-latest    
     environment: actions
 
